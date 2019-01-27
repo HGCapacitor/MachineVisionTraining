@@ -12,7 +12,9 @@ Prewitt::~Prewitt()
 
 /*private*/ const std::vector<std::vector<uint32_t>> Prewitt::Convolve(
 	const std::vector<std::vector<uint32_t>>& aImage,
-	const std::vector<std::vector<uint32_t>>& aMask)
+	const std::vector<std::vector<uint32_t>>& aMask,
+	unsigned char aStride,
+	bool aUsePadding)
 {
 	//Check mask size, must be uneven square
 	size_t maskSize = aMask.size();

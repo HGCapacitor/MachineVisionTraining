@@ -16,6 +16,8 @@ public:
 private:
 	const std::vector<std::vector<uint32_t>> Convolve(
 		const std::vector<std::vector<uint32_t>>& aImage,
-		const std::vector<std::vector<uint32_t>>& aImageMask);
+		const std::vector<std::vector<uint32_t>>& aMask,
+		unsigned char aStride = 1,
+		bool aUsePadding = true);
 };
 
